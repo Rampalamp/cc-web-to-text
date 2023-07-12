@@ -12,6 +12,7 @@ Setup the goog_scrape.py so that it will perform a query on google and iterate t
 #### Usage/Example
 
 ```bash
+    python -m pip install -r requirements.txt
     python main.py -u https://www.google.ca/
 ```
 
