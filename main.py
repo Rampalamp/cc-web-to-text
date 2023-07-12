@@ -8,6 +8,9 @@ def main(url):
     # get working dir, adjust string to save into /fetched_data/ dir
     WORKING_DIR = os.getcwd() + "/fetched_data/"
 
+    if not os.path.exists(WORKING_DIR):
+        os.makedirs(WORKING_DIR)
+
     # Strip URL of odd characters, timestamp for uniqueness and append to end of WORKING_DIR
     SAVE_PATH = (
         WORKING_DIR + "".join(filter(str.isalnum, url)) + str(time.time()) + ".txt"
