@@ -1,6 +1,6 @@
 ### Crozier Creative Web To Text
 
-Python project that aims to extract text from websites. My intent is that eventually you will be able to choose between querying a google search, and the scraper will go through every link returned by google (likely set limits to how many returned pages to scan over), OR just on a single given website URL.
+Python project that aims to extract text from websites. My intent is that eventually you will be able to choose between querying a google search (using their API), and the scraper will go through every link returned by google, OR just on a single given website URL.
 
 I suspect this (text extraction from websites) has almost certainly been done to a much greater extent already, but I felt like doing one myself. How long will I put effort towards this? TBD...
 

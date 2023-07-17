@@ -56,12 +56,12 @@ class TextExtractor:
     }
 
     def extract_text(html):
-        cleanr = re.compile("<.*?>")
+        cleanish_text = re.compile("<.*?>")
 
-        cleanish_html = re.sub(cleanr, "", html)
+        cleaner_html = re.sub(cleanish_text, "", html)
 
-        cleaner_html = None
+        cleanist_html = None
         for entity, char in TextExtractor.HTML_ENTITIES.items():
-            cleaner_html = cleanish_html.replace(entity, char)
+            cleanist_html = cleaner_html.replace(entity, char)
 
-        return cleaner_html
+        return cleanist_html
