@@ -6,7 +6,6 @@ I suspect this (text extraction from websites) has almost certainly been done to
 
 #### TODOs
 
-Likely need to clean up the formatting, although it is returning text excluding all the HTML tags, it's still not very clean.
 Setup the goog_scrape.py so that it will perform a query on google and iterate through the returned links, pulling and formatting text from each returned link.
 
 #### Usage/Example
