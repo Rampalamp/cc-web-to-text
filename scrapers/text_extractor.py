@@ -56,12 +56,17 @@ class TextExtractor:
     }
 
     def extract_text(html):
-        cleanish_text = re.compile("<.*?>")
+        # pattern to extract all html tags out of html
+        cleaner_pattern = r"<[^>]*\/?>"
 
-        cleaner_html = re.sub(cleanish_text, "", html)
+        cleaned_html = re.sub(cleaner_pattern, "", html)
+        # lots of sites will return an abundance of extra white space.
+        # its not really human friendly to read, but if fed to an AI for fine tuning, I don't think the machines would care?
+        extra_white_removed_html = re.sub(r"\s+", " ", cleaned_html)
 
-        cleanist_html = None
+        cleanist_html = extra_white_removed_html
+        # swap HTML entities out for actual character
         for entity, char in TextExtractor.HTML_ENTITIES.items():
-            cleanist_html = cleaner_html.replace(entity, char)
+            cleanist_html = cleanist_html.replace(entity, char)
 
         return cleanist_html
